@@ -9,9 +9,6 @@ import VueRouter from 'vue-router';
 import {router} from './routes.js';
 Vue.use(VueRouter);
 
-import VueResource from 'vue-resource';
-Vue.use(VueResource);
-
 new Vue({
   el: '#app',
   store,
