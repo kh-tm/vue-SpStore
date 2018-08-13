@@ -1,0 +1,131 @@
+<template>
+<div class="card-wrapper container">
+	<div class="card">
+		<a href="#">
+			<img class="card__image" src="./../../assets/images/photos/1/1T-kit.ru_Xiaomi_Redmi_5_Plus_Black_003.png">
+		</a>
+		<div class="card__name">
+			<a href="#">
+				Сяоми есть жи
+			</a>
+		</div>
+		<div class="card__cost">322 ₽</div>
+		<div class="card__buy" phoneId="1">
+			<div class="card__buy__text">В корзину</div>
+			<div class="card__buy__icon"></div>
+		</div>
+	</div>
+</div>
+</template>
+
+<script>
+export default {
+	
+}
+</script>
+
+<style scoped>
+.card__title {
+  margin-top: 40px;
+
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    width: 230px;
+    margin-bottom: 40px;
+}
+
+.card:not(:nth-child(4n)) {
+    margin-right: 13px;
+}
+
+.card__image {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.card:hover .card__image {
+    position: relative;
+    transform: scale(1.2, 1.2);
+    transition: all 150ms ease-in;
+}
+
+.card__name {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: auto;
+}
+
+.card__cost {
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.card__buy {
+    align-self: flex-end;
+    display: flex;
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card__buy__text {
+    margin: auto 15px auto 0;
+    visibility: hidden;
+}
+
+.card__buy__text--disabled {
+    visibility: visible;
+    cursor: auto;
+}
+
+.card:hover .card__buy__text {
+    visibility: visible;
+}
+
+.card__buy__icon {
+    background: url(./../../assets/images/basket-icon-white.png) no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: 2rem;
+    width: 2.5rem;
+    border-top: 3px solid rgba(0,0,0,0);
+    border-bottom: 3px solid rgba(0,0,0,0);
+    border-right: 10px solid rgba(0,0,0,0);
+    border-left: 10px solid rgba(0,0,0,0);
+    background-color: rgba(208, 50, 192, 0.15);
+    border-radius: 40%;
+}
+
+.card__buy:hover .card__buy__icon:not(.card__buy__icon--added) {
+    background: url(./../../assets/images/basket-icon-black.png) no-repeat center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-color: rgba(208, 50, 192, 0);
+}
+
+.card__buy__icon--added {
+    background-image: url(./../../assets/images/check.png);
+    background-color: initial;
+}
+</style>
